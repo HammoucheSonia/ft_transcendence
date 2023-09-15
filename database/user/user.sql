@@ -7,7 +7,8 @@ create table "user"
     "nickname" varchar(50) unique not null,
     "avatar_url" varchar(255) default 'default_avatar.png',
     "two_factor_auth" boolean default false,
-	"user_42_id" integer unique
+	"user_42_id" integer, 
+    "user_number" integer,
 );
 
 create or replace view "v_user" as select * from "user";
